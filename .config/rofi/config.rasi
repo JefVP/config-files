@@ -1,0 +1,14 @@
+configuration {
+	font: "Ubuntu Mono Nerd Font Mono 13";
+	line-margin: 13;
+	show-icons: true;
+}
+
+@theme "~/.config/rofi/nord.rasi"
+listview {
+	lines: 6;
+}
+
+window {
+	width: 30%;
+}
