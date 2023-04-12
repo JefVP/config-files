@@ -213,10 +213,10 @@ myLogHook = return ()
 -- By default, do nothing.
 myStartupHook = do 
 
-	spawnOnce "nitrogen --restore &" -- Wallpaper setter
-	spawnOnce "picom -b" -- Compositor --> Blur & transparency
-	spawnOnce "nm-applet &" -- Network Manager --> Internet
-	spawnOnce "polybar &" -- Bar
+    spawnOnce "nitrogen --restore &" -- Wallpaper setter
+    spawnOnce "picom -b" -- Compositor --> Blur & transparency
+    spawnOnce "nm-applet &" -- Network Manager --> Internet
+    spawnOnce "polybar &" -- Bar
     
 ------------------------------------------------------------------------
 -- Now run xmonad with all the defaults we set up.
