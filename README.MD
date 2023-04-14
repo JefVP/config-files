@@ -1,8 +1,16 @@
+# My configs
+Most of these config files are where they would normally be placed relative to the home folder.
 
-# De epischste config directory.
+For the fonts just do **sudo mv ./nerdFonts /usr/share/fonts/** followed by **sudo fc-cache**
 
-Deze repo is voornamelijk gemaakt om mijn epische configs te passeren naar Don Kyjuan.
-Hopelijk voegt dit iets van waarde toe.
 
-Veel plezier!
- - de **enge** man.
+# Dependencies
+The package names are based on Arch Linux's pacman package manager, you might need to look into what your package manager calls these.
+Keep in mind I might have missed something, maybe even something obvious, if something doesn't work check the config file.
+
+## zsh
+zsh-syntax-highlighting
+zsh-autosuggestions
+
+## picom
+Not really a dependency, but my picom config uses OpenGL.
