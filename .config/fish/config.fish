@@ -1,14 +1,14 @@
-#	     _       ____     ______		
-#	    | | ___ / _\ \   / /  _ \		
-#	 _  | |/ _ \ |_ \ \ / /| |_) |		https://github.com/JefVP/
-#	| |_| |  __/  _| \ V / |  __/ 
-#	 \___/ \___|_|    \_/  |_|    
-#                              
+#	  __ _     _     
+#	 / _(_)___| |__  
+#	| |_| / __| '_ \ 
+#	|  _| \__ \ | | |							https://github.com/JefVP
+#	|_| |_|___/_| |_|							my fish config, nothing special.
+                 
 
 # INITIALISE
-set fish_greeting ""			# Supress "Welcome to fish..." message
-set TERM "st-256color"			# Set terminal to ST
-set EDITOR "nvim"				# Set editor to Neovim
+set fish_greeting ""							# Supress "Welcome to fish..." message
+set TERM "st-256color"							# Set terminal to ST
+set EDITOR "nvim"								# Set editor to Neovim
 
 # VI MODE KEYBINDS
 function fish_user_key_bindings
@@ -17,28 +17,29 @@ end
 
 # ALIASES
 # Quick open config
+alias bconf='nvim ~/.bashrc'					# edit bash config
 alias fconf='nvim ~/.config/fish/config.fish'	# Edit fish config
-alias xconf='nvim ~/.xmonad/xmonad.hs'			# Edit xmonad config
 alias pconf='nvim ~/.config/polybar/config.ini'	# Edit polybar config
+alias xconf='nvim ~/.xmonad/xmonad.hs'			# Edit xmonad config
 
 # Terminal stuff
-alias vim='nvim'				# Shorter binding for Neovim
-alias cls='clear'				# clear, but faster
-alias grep='grep --color=auto'	# Colourise grep output
+alias vim='nvim'								# Open Neovim instead of vim
+alias cls='clear'								# Shorter clear
+alias grep='grep --color=auto'					# More colour in the grep output
 
 # Power
-alias sdn='sudo shutdown now'	# Shut down the OS
-alias sdr='sudo reboot now'		# Reboot the OS
+alias sdn='sudo shutdown now'					# Turn off computer
+alias sdr='sudo reboot now'						# Restart computer
 
-# File related stuff
-alias ls='exa -alh'				# Colourful ls -alh output
-alias tree='exa -ahT'			# Colourful tree output with all files
-alias df='df -h'				# Get the disk usage
-#alias untar='tar -zxvf'			# Extract tarball
-#alias du='du -h'				# Get file size
+# File management aliases
+alias ls='exa -alh'								# Set ls to a more colourful and lengthy output
+alias tree='exa -ahT'							# Get a colourful filesystem tree for whatever directory
+alias df='df -h'								# Show df output in a human readable format by default
+alias du='du -h'								# Show du output in a human readable format by default
 
 # Internet stuff
-alias myip='curl ipinfo.io/ip'	# Get your public IP
+alias myip='curl ipinfo.io/ip'					# Get your public IP
+alias weather='curl wttr.in'					# Get weather informatoin based on your IP address
 
 # Misc stuff
 alias nf='neofetch'
