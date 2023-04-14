@@ -1,0 +1,243 @@
+1. Basic Switch and end Device Configuration
+
+1.1 Cisco IOS Access
+purpose of an OS:
+	PC: use GUI
+	CLI-based network OS: use shell
+	
+Access Methods:
+	Console: physical management port
+	SSH: secure remote connection
+	Telnet	insecure remote connection
+	
+Terminal Emulation Programs:
+	are used to connect to a network device by either a console port or by an SSH/Telnet connection.
+
+1.2 IOS Navigation
+Primary Command Modes:
+	User EXEC Mode (>): access to a limited number of basic monitoring commands
+	Privileged EXEC Mode (#): access to all commands and features
+	Global Configuration Mode (config): access configuration options on the device
+	Line Configuration Mode (config-line):  configure console, SSH, Telnet or AUX acces
+	Interface Configuration Mode (config-if): configure a switch port or router interface
+	
+Subconfiguration Modes:
+	move from one subconfiguration mode to another, type in the subconfiguration mode command.
+	(example: from config-line → interface)
+	
+1.3 The Command Structure
+
+Basic IOS Command Structure:
+	Prompt
+	Command
+	Space
+	Keyword / Argument
+
+Keyword: specific parameter defined in the operating system
+Argument: not predefined, is a value or variable defined by the user
+
+IOS Command Syntax Check
+A command might require one or more arguments. To determine the keywords and arguments required for a command,
+refer to the command syntax.
+
+	boldface: commands and keywords
+	italic: arguments
+	[x]: optional element
+	{x}: required element
+	[x{y|z}]: required choice within an optional element.
+	
+IOS Help Features
+two forms of help:
+	Context-sensitive help
+	Command syntax check:
+		verifies that a valid command was entered by the user.
+
+Hot Keys and Shortcuts
+
+Commands and keywords can be shortened to the minimum number of characters that identify a unique selection
+
+	Tab: Completes a partial command
+	Backspace: Erases the character to the left of the cursor
+	Left Arrow or Ctrl+B: Moves the cursor one character to the left.
+	Right Arrow or Ctrl+F: Moves the cursor one character to the right.
+	Up Arrow or Ctrl+P: Recalls the commands in the history buffer, beginning with the most recent commands.
+
+When command output shows more text than can be displayed in a terminal, the IOS will display a “--More--” prompt.
+	Enter Key: Shows next line
+	Space bar: displays next screen
+	Any other key: ends the display string returning to priveleged exec mode
+	Ctrl-C: in any configuration mode, ends the configuration mode and returns to privileged EXEC mode
+	Ctrl-Z: in any configuration mode, ends the configuration mode and returns to privileged EXEC mode
+	Ctrl-Shift-6: All-purpose break sequence
+
+1.4 Basic Device Configuration
+Device Names: first configuration command on any device should be to give it a unique hostname
+
+Configure Passwords
+
+Securing user EXEC mode access:
+	First enter line console configuration mode using the line console 0 command in global configuration mode.
+	Next, specify the user EXEC mode password using the password password command.
+	Finally, enable user EXEC access using the login command.
+	
+Securing privileged EXEC mode access:
+	First enter global configuration mode.
+	Next, use the enable secret password command.
+	
+Securing VTY (virtual teletype) line access:
+	First enter line VTY configuration mode using the line vty 0 15 command in global configuration mode.
+	Next, specify the VTY password using the password password command.
+	Finally, enable VTY access using the login command
+	
+Encrypt Passwords:
+	The startup-config and running-config files display most passwords in plaintext.
+	To encrypt all plaintext passwords, use the service password-encryption global config command.
+	Use the show running-config command to verify that the passwords on the device are now encrypted.
+	
+Banner Messages:
+	A banner message is important to warn unauthorized personnel from attempting to access the device.
+	To create a banner message of the day on a network device, use the banner motd # the message of the day # global config command.
+
+1.5 Save Configurations
+Configuration Files
+
+two system files that store the device configuration:
+	startup-config: stored in NVRAM
+	running-config:stored in RAM
+	
+save changes made to the running configuration to the startup configuration file:
+copy running-config startup-config
+
+Alter the Running Configurations
+restore:
+	Remove the changed commands individually.
+	Reload the device using the reload command.
+clear all configurations:
+	erase startup-config
+
+Capture Configuration to a Text File:
+	Step 1. Open terminal emulation software, such as PuTTY or Tera Term, that is already connected to a switch.
+	Step 2. Enable logging in to the terminal software and assign a name and file location to save the log file.
+		The figure displays that All session output will be captured to the file specified (i.e., MySwitchLogs)
+	Step 3. Execute the show running-config or show startup-config command at the privileged EXEC prompt.
+		Text displayed in the terminal window will be placed into the chosen file.
+	Step 4. Disable logging in the terminal software.
+		The figure shows how to disable logging by choosing the None session logging option
+	
+1.6 Ports and Addresses
+IP Addresses:
+	The use of IP addresses is the primary means of enabling devices to locate one another and establish
+		end-to-end communication on the internet.
+	The structure of an IPv4 address is called dotted decimal notation and is represented by four decimal numbers
+		between 0 and 255.
+	An IPv4 subnet mask is a 32-bit value that differentiates the network portion of the address from the host portion.
+		Coupled with the IPv4 address, the subnet mask determines to which subnet the device is a member.
+	The default gateway address is the IP address of the router that the host will use to access remote networks,
+		including the internet.
+	
+	IPv6 addresses are 128 bits in length and written as a string of hexadecimal values. Every four bits is
+		represented by a single hexadecimal digit; for a total of 32 hexadecimal values. Groups of four hexadecimal
+		digits are separated by a colon “:”.
+	IPv6 addresses are not case-sensitive and can be written in either lowercase or uppercase.
+	
+Interfaces and Ports:
+Network communications depend on end user device interfaces, networking device interfaces, and the cables that connect
+	them.
+Types of network media include twisted-pair copper cables, fiber-optic cables, coaxial cables, or wireless.
+Different types of network media have different features and benefits.
+	Some of the differences between various types of media include:
+		Distance the media can successfully carry a signal
+		Environment in which the media is to be installed
+		Amount of data and the speed at which it must be transmitted
+		Cost of the media and installation
+	
+1.7 Configure IP Addressing
+Manual IP addressing:
+End devices on the network need an IP address in order to communicate with other devices on the network.
+IPv4 address information can be entered into end devices manually, or automatically using Dynamic Host Configuration
+	Protocol (DHCP).
+		To manually configure an IPv4 address on a Windows PC, open the Control Panel > Network Sharing Center >
+			Change adapter settings and choose the adapter. Next right-click and select Properties to display the
+			Local Area Connection Properties.
+		Next, click Properties to open the Internet Protocol Version 4 (TCP/IPv4) Properties window.
+			Then configure the IPv4 address and subnet mask information, and default gateway.
+			
+Automatic IP Addressing:
+	DHCP enables automatic IPv4 address configuration for every end device that is DHCP-enabled.
+	End devices are typically by default using DHCP for automatic IPv4 address configuration.
+	To configure DHCP on a Windows PC, open the Control Panel > Network Sharing Center > Change adapter settings
+		and choose the adapter. Next right-click and select Properties to display the Local Area Connection Properties.
+	Next, click Properties to open the Internet Protocol Version 4 (TCP/IPv4) Properties window, then select Obtain an
+		IP address automatically and Obtain DNS server address automatically.
+
+Switch Virtual Interface Configuration
+To access the switch remotely, an IP address and a subnet mask must be configured on the SVI (switch virtual interface).
+To configure an SVI on a switch:
+	Enter the interface vlan 1 command in global configuration mode.
+	Next assign an IPv4 address using the ip address ip-address subnet-mask command.
+	Finally, enable the virtual interface using the no shutdown command
+
+2.1 The Rules
+Communications Fundamentals:
+Networks can vary in size and complexity. It is not enough to have a connection, devices must agree on “how”
+	to communicate.
+There are three elements to any communication:
+	There will be a source (sender).
+	There will be a destination (receiver).
+	There will be a channel (media) that provides for the path of communications to occur.
+
+Communications Protocols
+	All communications are governed by protocols.
+	Protocols are the rules that communications will follow.
+	These rules will vary depending on the protocol
+
+Rule Establishment
+	Protocols must account for the following requirements:
+		An identified sender and receiver
+		Common language and grammar
+		Speed and timing of delivery
+		Confirmation or acknowledgment requirements
+
+Network Protocol Requirements
+Common computer protocols must be in agreement and include the following requirements:
+	Message encoding
+	Message formatting and encapsulation
+	Message size
+	Message timing
+	Message delivery options
+
+Message Timing:
+	
+	Flow Control – Manages the rate of data transmission
+	Response Timeout – Manages how long a device waits when it does not hear a reply from the destination.
+	Access method - Determines when someone can send a message.
+	
+Message Delivery Option:
+	Unicast – one to one communication
+	Multicast – one to many, typically not all
+	Broadcast – one to all
+
+2.2 Protocols
+Network Protocol Functions
+	Addressing: Identifies sender and receiver
+	Reliability: Provides guaranteed delivery
+	Flow Control: Ensures data flows at an efficient rate
+	Sequencing: Uniquely labels each transmitted segment of data
+	Error Detection: Determines if data became corrupted during transmission
+	Application Interface: Process-to-process communications between network applications
+	
+Protocol Interaction
+Hypertext Transfer Protocol (HTTP):
+	Governs the way a web server and a web client interact
+	Defines content and format Transmission Control
+Protocol (TCP)
+	Manages the individual conversations
+	Provides guaranteed delivery
+	Manages flow control
+	
+Internet Protocol (IP):
+	Delivers messages globally from the sender to the receiver
+	Ethernet Delivers messages from one NIC to another NIC on the same Ethernet Local Area Network (LAN)
+	
+2.3 Protocol Suites
+

@@ -1,0 +1,5 @@
+enable → user to priveleged mode
+configure terminal → priveleged mode to global config mode
+line console x → global config mode to line config mode
+exit, end, ctrl+z → go up 1 level of access (for example priveleged → user mode)
+
