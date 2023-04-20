@@ -10,12 +10,13 @@
 TERM='st-256color'								# Set terminal emulator to ST
 EDITOR='nvim'									# Set default editor to neovim
 
-#autoload -U colors && colors					# enable colours
-HISTFILE=~/.config/zsh/zsh_history				# Setting history file
+#autoload -U colors && colors							# enable colours
+HISTFILE=~/.config/zsh/zsh_history						# Setting history file
 HISTSIZE=1000									# History file 1000 lines
 SAVEHIST=1000									# History file 1000 lines
-setopt autocd nomatch							# Typing dir name will cd into it
-unsetopt beep extendedglob notify				# No Beeps
+
+setopt autocd nomatch histignorespace nocaseglob				# Typing dir name will cd into it
+unsetopt beep extendedglob notify						# No Beeps
 
 #PROMPT="%F{81}%n%f%F{15}@%f%F{87}%m ❯ %f%F{15}"
 #RPROMPT="%~"
@@ -27,7 +28,7 @@ compinit
 # ----------------------------------------------
 # VI MODE
 # ----------------------------------------------
-bindkey -v										# Vim keybinds
+bindkey -v									# Vim keybinds
 
 # Change cursor shape for different vi modes.
 function zle-keymap-select {
@@ -44,10 +45,10 @@ function zle-keymap-select {
 }
     zle -N zle-keymap-select
 
-    echo -ne '\e[5 q'							# Use beam shape cursor on startup.
+    echo -ne '\e[5 q'								# Use beam shape cursor on startup.
 
     preexec() {
-       echo -ne '\e[5 q'						# Use beam shape cursor for each new prompt.
+       echo -ne '\e[5 q'							# Use beam shape cursor for each new prompt.
     }
 
 
@@ -56,20 +57,20 @@ function zle-keymap-select {
 # ALIASES
 # ----------------------------------------------
 # editing configs
-alias zconf='nvim ~/.zshrc'						# Edit zsh config
-alias bconf='nvim ~/.bashrc'					# Edit bash config
-alias fconf='nvim ~/.config/fish/config.fish'	# Edit fish config
-alias pconf='nvim ~/.config/polybar/config.ini'	# Edit polybar config
-alias xconf='nvim ~/.xmonad/xmonad.hs'			# Edit xmonad config
+alias zconf='nvim ~/.zshrc'							# Edit zsh config
+alias bconf='nvim ~/.bashrc'							# Edit bash config
+alias fconf='nvim ~/.config/fish/config.fish'					# Edit fish config
+alias pconf='nvim ~/.config/polybar/config.ini'					# Edit polybar config
+alias xconf='nvim ~/.xmonad/xmonad.hs'						# Edit xmonad config
 
 # Terminal related aliases
 alias vim='nvim'								# Open neovim instead of vim
 alias cls='clear'								# Shorter clear
-alias grep='grep --color=auto'					# More colour in the grep output
+alias grep='grep --color=auto'							# More colour in the grep output
 
 # Power aliases
-alias sdn='sudo shutdown now'					# Turn off computer
-alias sdr='sudo reboot now'						# Restart computer
+alias sdn='sudo shutdown now'							# Turn off computer
+alias sdr='sudo reboot now'							# Restart computer
 
 # File management aliases
 alias ls='exa -alh'								# Set ls to a more colourful and lenghty output
