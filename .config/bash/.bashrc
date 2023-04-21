@@ -1,8 +1,8 @@
 #	 ____    _    ____  _   _ 
 #	| __ )  / \  / ___|| | | |
 #	|  _ \ / _ \ \___ \| |_| |
-#	| |_) / ___ \ ___) |  _  |
-#	|____/_/   \_\____/|_| |_|
+#	| |_) / ___ \ ___) |  _  |							https://github.com/JefVP/
+#	|____/_/   \_\____/|_| |_|							My bashrc, while I don't use bash, I will add all aliases from my zsh config.
                           
 [[ $- != *i* ]] && return								# If not running interactively, don't do anything
 
@@ -19,8 +19,7 @@ export PS1="\[\033[38;5;14m\]\u\[$(tput sgr0)\]@\[$(tput sgr0)\]\[\033[38;5;14m\
 # editing configs
 alias zconf='nvim ~/.zshrc'								# Edit zsh config
 alias bconf='nvim ~/.bashrc'							# Edit bash config
-alias fconf='nvim ~/.config/fish/config.fish'			# Edit fish config, more so to look at it
-alias pconf='nvim ~/.config/polybar/config.ini'			# Edit polybar config
+alias pconf='nvim ~/.config/polybar/config'				# Edit polybar config
 alias xconf='nvim ~/.xmonad/xmonad.hs'					# Edit xmonad config
 
 # Terminal related aliases

@@ -1,8 +1,8 @@
 #	  __ _     _     
 #	 / _(_)___| |__  
-#	| |_| / __| '_ \ 
-#	|  _| \__ \ | | |							https://github.com/JefVP
-#	|_| |_|___/_| |_|							my fish config, nothing special.
+#	| |_| / __| '_ \							https://github.com/JefVP
+#	|  _| \__ \ | | |							My fish config, currently not being maintained.
+#	|_| |_|___/_| |_|							
                  
 
 # INITIALISE
