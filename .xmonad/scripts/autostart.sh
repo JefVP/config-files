@@ -19,8 +19,6 @@ nitrogen --restore &
 run nm-applet &
 picom -b
 /usr/bin/greenclip daemon > /dev/null
-dunst &
-# picom --config $HOME/.xmonad/scripts/picom.conf &
-
+exec dunst
 #starting user applications at boot time
 

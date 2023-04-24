@@ -59,8 +59,7 @@ myModMask = mod4Mask
 encodeCChar = map fromIntegral . B.unpack
 myFocusFollowsMouse = True
 myBorderWidth = 2
--- myWorkspaces    = ["\61612","\61899","\61947","\61635","\61502","\61501","\61705","\61564","\62150","\61872"]
-myWorkspaces    = ["dev","www","discord","guilded","5","6","7","8","mus","misc"]
+myWorkspaces    = ["dev","www","chat1","chat2","virt","misc","misc2","misc3","mus"]
 -- myWorkspaces    = ["I","II","III","IV","V","VI","VII","VIII","IX","X"]
 
 myBaseConfig = desktopConfig
@@ -92,8 +91,8 @@ myManageHook = composeAll . concat $
 
 
 
-
-myLayout = gaps [(U,8), (D,8), (R,8), (L,8)] $ avoidStruts $ spacingRaw True (Border 5 2 2 2) True (Border 2 2 2 2) True $ mkToggle (NBFULL ?? NOBORDERS ?? EOT) $ tiled |||  Full
+-- myLayout = gaps [(U,10), (D,10), (L,10), (R,10)] (smartSpacing 4 (avoidStruts(tiled))) ||| fullscreenFull
+myLayout = gaps [(U,8), (D,8), (R,8), (L,8)] ( avoidStruts $ spacingRaw True (Border 5 2 2 2) True (Border 2 2 2 2) True $ mkToggle (NBFULL ?? NOBORDERS ?? EOT) $ tiled ) ||| Full
     where
         tiled = Tall nmaster delta tiled_ratio
         nmaster = 1
@@ -265,7 +264,7 @@ main = do
         [D.nameAllowReplacement, D.nameReplaceExisting, D.nameDoNotQueue]
 
 
-    xmonad . ewmh $
+    xmonad . ewmh $ ewmhFullscreen
   --Keyboard layouts
   --qwerty users use this line
             myBaseConfig

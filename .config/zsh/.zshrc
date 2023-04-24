@@ -10,8 +10,8 @@
 TERM='st-256color'								# Set terminal emulator to ST
 EDITOR='nvim'									# Set default editor to neovim
 
-#autoload -U colors && colors							# enable colours
-HISTFILE=~/.config/zsh/zsh_history						# Setting history file
+#autoload -U colors && colors					# enable colours
+HISTFILE=~/.config/zsh/zsh_history				# Setting history file
 HISTSIZE=1000									# History file 1000 lines
 SAVEHIST=1000									# History file 1000 lines
 
@@ -58,7 +58,6 @@ function zle-keymap-select {
 # ----------------------------------------------
 # editing configs
 alias zconf='nvim ~/.zshrc'						# Edit zsh config
-alias bconf='nvim ~/.bashrc'					# Edit bash config
 alias pconf='nvim ~/.config/polybar/config'		# Edit polybar config
 alias xconf='nvim ~/.xmonad/xmonad.hs'			# Edit xmonad config
 
@@ -85,6 +84,8 @@ alias weather='curl wttr.in'					# Get weather information based on your IP addr
 alias nf='neofetch'								# Shorten neofetch command to nf
 alias sx='startx'								# Start X server faster
 
+# Github related.
+# alias grabcf=''
 
 # ----------------------------------------------
 # Plugins

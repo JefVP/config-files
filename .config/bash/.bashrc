@@ -18,7 +18,6 @@ export PS1="\[\033[38;5;14m\]\u\[$(tput sgr0)\]@\[$(tput sgr0)\]\[\033[38;5;14m\
 # ----------------------------------------------
 # editing configs
 alias zconf='nvim ~/.zshrc'								# Edit zsh config
-alias bconf='nvim ~/.bashrc'							# Edit bash config
 alias pconf='nvim ~/.config/polybar/config'				# Edit polybar config
 alias xconf='nvim ~/.xmonad/xmonad.hs'					# Edit xmonad config
 
