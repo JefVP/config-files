@@ -19,6 +19,6 @@ nitrogen --restore &
 run nm-applet &
 picom -b
 /usr/bin/greenclip daemon > /dev/null
-exec dunst
+dbus-launch dunst &
 #starting user applications at boot time
 

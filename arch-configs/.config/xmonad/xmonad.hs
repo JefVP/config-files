@@ -1,3 +1,9 @@
+--	__  ____  __                       _ 
+--	\ \/ /  \/  | ___  _ __   __ _  __| |
+--	 \  /| |\/| |/ _ \| '_ \ / _` |/ _` |
+--	 /  \| |  | | (_) | | | | (_| | (_| |		https://github.com/JefVP
+--	/_/\_\_|  |_|\___/|_| |_|\__,_|\__,_|		My XMonad config. A work in progress but usable.
+                                     
 import System.IO
 import System.Exit
 
@@ -41,7 +47,7 @@ import qualified DBus.Client as D
 
 
 myStartupHook = do
-    spawn "$HOME/.xmonad/scripts/autostart.sh"
+    spawn "$HOME/.config/xmonad/scripts/autostart.sh"
 
 -- colours
 normBord = "#4c566a"
@@ -59,7 +65,7 @@ myModMask = mod4Mask
 encodeCChar = map fromIntegral . B.unpack
 myFocusFollowsMouse = True
 myBorderWidth = 2
-myWorkspaces    = ["dev","www","chat1","chat2","virt","misc","misc2","misc3","mus"]
+myWorkspaces    = ["dev","www","discord","guilded","virt","pass","misc","mail","mus"]
 -- myWorkspaces    = ["I","II","III","IV","V","VI","VII","VIII","IX","X"]
 
 myBaseConfig = desktopConfig
@@ -74,7 +80,7 @@ myManageHook = composeAll . concat $
     ]
     where
     -- doShiftAndGo = doF . liftM2 (.) W.greedyView W.shift
-    myCFloats = ["Arandr", "Arcolinux-calamares-tool.py", "Archlinux-tweak-tool.py", "Arcolinux-welcome-app.py", "Galculator", "feh", "mpv", "Xfce4-terminal"]
+    myCFloats = ["Arandr", "Galculator", "feh", "mpv", "Xfce4-terminal"]
     myTFloats = ["Downloads", "Save As..."]
     myRFloats = []
     myIgnores = ["desktop_window"]
@@ -120,11 +126,12 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
   ----------------------------------------------------------------------
   -- SUPER + FUNCTION KEYS
 
-  [ ((modMask .|. shiftMask , xK_Return ), spawn $ "st" )
+  [ ((modMask .|. shiftMask , xK_Return ), spawn $ "alacritty" )
   , ((modMask, xK_p ), spawn $ "rofi -show drun")
   , ((modMask, xK_s ), spawn "flameshot full -p /home/jef/Pictures/screenshots")
-  , ((modMask .|. shiftMask, xK_c ), kill)
   , ((modMask .|. shiftMask, xK_s ), spawn "flameshot gui -s -p /home/jef/Pictures/screenshots")
+  , ((modMask, xK_e ), spawn "Thunar")
+  , ((modMask .|. shiftMask, xK_c ), kill)
   , ((modMask, xK_y), spawn $ "polybar-msg cmd toggle" )
   , ((modMask, xK_Tab ), windows W.focusDown)
   , ((modMask, xK_j ), windows W.focusDown)
@@ -136,6 +143,8 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
   , ((modMask .|. shiftMask, xK_m ), windows W.swapMaster)
   , ((modMask, xK_h ), sendMessage Shrink)
   , ((modMask, xK_l ), sendMessage Expand)
+  , ((modMask .|. shiftMask, xK_v), spawn "greenclip clear")
+  , ((modMask, xK_v), spawn "rofi -modi 'clipboard:greenclip print' -show clipboard -run-command '{cmd'")
  
   -- SUPER + SHIFT KEYS
   , ((modMask, xK_q ), spawn $ "xmonad --recompile && xmonad --restart")
@@ -151,9 +160,6 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
   -- Increase volume
   , ((0, xF86XK_AudioRaiseVolume), spawn $ "amixer -q set Master 5%+")
 
-
-  -- Decrease brightness
-  , ((0, xF86XK_MonBrightnessDown), spawn $ "xbacklight -dec 5")
 
   -- Alternative to increase brightness
 
@@ -236,11 +242,6 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
   --qwerty users use this line
    | (i, k) <- zip (XMonad.workspaces conf) [xK_1,xK_2,xK_3,xK_4,xK_5,xK_6,xK_7,xK_8,xK_9,xK_0]
 
-  --French Azerty users use this line
-  -- | (i, k) <- zip (XMonad.workspaces conf) [xK_ampersand, xK_eacute, xK_quotedbl, xK_apostrophe, xK_parenleft, xK_minus, xK_egrave, xK_underscore, xK_ccedilla , xK_agrave]
-
-  --Belgian Azerty users use this line
-  --   | (i, k) <- zip (XMonad.workspaces conf) [xK_ampersand, xK_eacute, xK_quotedbl, xK_apostrophe, xK_parenleft, xK_section, xK_egrave, xK_exclam, xK_ccedilla, xK_agrave]
 
       , (f, m) <- [(W.greedyView, 0), (W.shift, shiftMask)
       , (\i -> W.greedyView i . W.shift i, shiftMask)]]

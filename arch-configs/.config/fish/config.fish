@@ -1,13 +1,13 @@
 #	  __ _     _     
 #	 / _(_)___| |__  
-#	| |_| / __| '_ \							https://github.com/JefVP
-#	|  _| \__ \ | | |							My fish config, currently not being maintained.
-#	|_| |_|___/_| |_|							
+#	| |_| / __| '_ \ 
+#	|  _| \__ \ | | |
+#	|_| |_|___/_| |_|							# My fish config, unmaintained as I moved to zsh.
                  
 
 # INITIALISE
 set fish_greeting ""							# Supress "Welcome to fish..." message
-set TERM "st-256color"							# Set terminal to ST
+# set TERM "st-256color"						# Set terminal to whatever it is you are using, maybe try xprop and clicking your terminal first.
 set EDITOR "nvim"								# Set editor to Neovim
 
 # VI MODE KEYBINDS
@@ -17,8 +17,6 @@ end
 
 # ALIASES
 # Quick open config
-alias bconf='nvim ~/.bashrc'					# edit bash config
-alias fconf='nvim ~/.config/fish/config.fish'	# Edit fish config
 alias pconf='nvim ~/.config/polybar/config.ini'	# Edit polybar config
 alias xconf='nvim ~/.xmonad/xmonad.hs'			# Edit xmonad config
 
