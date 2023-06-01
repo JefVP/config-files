@@ -1,0 +1,1016 @@
+rm .config/alacritty/alacritty.yml
+mv alacritty.yml .config/alacritty
+sdn
+sx
+ls
+cd git-repos/dwm
+ls
+make clean
+ls
+vim config.h
+ls
+cd dwm2
+ls
+make clean
+ls
+vim config.def.h
+cd ../dwm
+ls
+vim config.def.h
+cd ..
+ls
+rm -rf dwm*
+ls
+git clone https://git.suckless.org/dwm
+ls Downloads
+ls
+cd Downloads
+ls
+ls
+s
+ls
+cd ..
+cd dwm
+git apply ~/Downloads/dwm-uselessgap-20211119-58414bee958f2.diff
+ls
+vim config.def.h
+ls
+git apply ~/Downloads/dwm-autostart-20210120-cb3f58a.diff
+ls
+sudo make clean install
+vim config.def.h
+ls
+sudo make clean
+ls
+rm config.h
+ls
+sudo make clean install
+sx
+sudo reboot -n
+nf
+cd dwm
+vim config.def.h
+ls
+vim Makefile
+vim config.mk
+ls
+sudo chown jef:jef config.h
+ls
+ls
+rm config.def.h
+cd .xmonad
+ls
+vim xmonad.hs
+ls
+cd dwm
+ls
+sudo make clean
+ls
+vim config.h
+ls
+vim config.h
+sudo emerge greenclip
+vim config.h
+ls
+sudo emerge feh
+ls
+cd dwm
+feh
+ls
+vim transient.c
+ls
+rm packages yeet fard
+ls
+clear && nf
+clear && nf
+clear && nf
+cmus
+sudo emerge dbus
+sudo emerge --autounmask-write dbus
+sudo emerge dbus
+sudo emerge sys-apps/dbus
+cmus
+cmus
+cd .config/cmus
+ls
+vim autosave
+cmus
+cd
+cmus
+cmus
+clear && neofetch
+clear && neofetch
+clear && neofetch
+sudo emerge cava
+cava
+sudo modprobe snd_aloop
+cava
+sx
+nf
+cd Downloads
+ls
+less dwm-attachabove-6.2-20200421.diff
+less dwm-attachabove-6.2-20200421.diff
+cd dwm-2
+vim dwm.c
+ls
+cd ..
+rm -rf dwm-2
+cp -r dwm dwm-2
+cd dwm-2
+ls
+git apply ~/Downloads/dwm-ewmhtags-6.2.diff
+git apply ~/Downloads/dwm-anybar-polybar-tray-fix-20200810-bb2e722.diff
+git apply ~/Downloads/dwm-attachabove-6.2-20200421.diff
+git apply ~/Downloads/dwm-anybar-polybar-tray-fix-20200810-bb2e722.diff
+git apply ~/Downloads/dwm-noborder-6.2.diff
+ls
+cd dwm
+ls
+cd ..
+cp -r dwm dwm-2
+ls
+cd dwm-2
+ls
+vim dwm.c
+sudo make clean install
+cd
+less Downloads/dwm-attachabove-6.2-20200421.diff
+less Downloads/dwm-attachabove-6.2-20200421.diff
+cd Downloads
+ls
+ls
+mkdir applied
+mv dwm-uselessgap-20211119-58414bee958f2.diff dwm-autostart-20210120-cb3f58a.diff applied
+ls
+vim dwm-attachabove-6.2-20200421.diff
+ls
+nf
+tree Downloads
+vim dwm/config.h
+vim .zshrc
+git clone https://github.com/bakkeby/dwm-flexipatch.git
+cd dwm-flexipatch
+ls
+vim patches.def.h
+vim config.def.h
+vim patches.def.h
+vim config.def.h
+ls
+sudo make clean
+ls
+sudo make clean install
+ls
+rm -rf dwm-2
+cp -r dwm dwm-2
+sx
+sdr
+sx
+cd dwm-flexipatch
+ls
+sudo make clean
+ls
+sudo rm config.h
+ls
+vim config.def.h
+sudo make clean install
+sdr
+cd dwm
+ls
+sudo make clean install
+cd dwm-flexipatch
+ls
+sudo make clean install
+cd dwm-flexipatch
+vim config.def.h
+ls
+sudo make clean
+sudo rm config.h
+sudo make clean install
+nf
+cava
+sudo modprobe snd_aloop
+cava
+man cava
+cava
+sudo emerge media-sound/cava
+sudo emerge iniparser
+cava
+cava
+neofetch
+cmus
+sdr
+sx
+sx
+cava
+neofetch
+neofetch
+neofetch
+sudo modprobe snd_aloop
+cava
+neofetch
+cmus
+cava
+neofetch
+neofetch
+neofetch
+cmus
+neofetch
+sx
+sdn
+sudo modprobe snd_aloop
+ls
+cd dwm-flexipatch
+cd
+exit
+sudo emerge xmonad xmonad-contrib xmonad-extras xmonad-dbus
+sudo emerge xmonad xmonad-contrib xmonad-dbus
+sudo emerge x11-wm/xmonad x11-wm/xmonad-contrib x11-wm/xmonad-extras
+sudo emerge x11-wm/xmonad x11-wm/xmonad-contrib x11-wm/xmonad-dbus
+sudo emerge x11-wm/xmonad x11-wm/xmonad-contrib
+sudo emerge x11-misc/xmonad-extras
+neofetch
+neofetch
+ls
+cd .xmonad
+ls
+rm -rf build-x86_64-linux xmonad*
+ls
+sudo emerge xmobar
+cmus
+cmus
+clear && neofetch
+clear && neofetch
+clear && neofetch
+dbus-launch dunst &
+killall dunst
+dbus-launch dunst &
+notify-send balls
+htop
+cd .config
+cd xmonad
+ls
+mkdir scripts
+vim scripts/autostart.sh
+vim .config/.xmonad/scripts/autostart.sh
+cd .config
+ls
+cd .xmonad
+vim xmonad.hs
+cd .config
+mkdir xmonad
+cd xmonad
+ls
+vim xmonad.hs
+ls
+cd .config/xmonad
+ls
+cd
+cd .xmonad
+ls
+cd ..
+rm -rf .xmonad
+ls
+cd .xmonad
+ls
+vim xmonad.hs
+notify-send "choo choo motherfucker"
+dunst &
+notify-send "choo choo motherfucker"
+sx
+sdn
+vim .config/xmonad/xmonad.hs
+vim .config/.xmonad/xmonad.hs
+neofetch
+neofetch
+rofi -show drun
+cd .config/qtile
+ls
+xconf
+vim .config/xmonad/xmonad.hs
+vim .config/.xmonad/xmonad.hs
+cd .config/x
+cd .config/xmonad
+ls
+cp -r scripts ../qtile
+cd ../qtile
+ls
+cd scripts
+ls
+vim autostart.sh
+ls
+xrandr -s 1920x1080
+neofetch
+cd .config/qtile/
+ls
+vim config.py
+vim config.py
+vim config.py
+vim config.py
+cd .config/qtile
+ls
+vim config.py
+sdn
+vim .xinitrc
+sx
+vim .xinitrc
+sx
+sx
+man qtile
+sx
+sx
+qtile --help
+qtile help
+sx
+ls .config/qtile
+ls .xmonad
+rm -rf .xmonad
+ls
+whereis xmonad
+ls
+cd .config/xmonad
+ls
+vim xmonad.hs
+sudo emerge x11-wm/qtile qtile-extras
+cd
+vim .bash
+vim .bashrc
+sudo emerge x11-wm/qtile
+vim .config/qtile/config.py
+ls
+vim .xinitrc
+vim .xinitrc
+cd .config/qtile/scripts
+ls
+chmod +x autostart.sh
+cd .config/qtile/scripts
+./autostart.sh
+vim autostart.sh
+./autostart.sh
+neofetch
+htop
+vim .config/qtile/scripts/autostart.sh
+git clone https://github.com/qtile/qtile.git
+ls
+mv qtile git-repos
+mv scripts .config
+ls
+zconf
+neofetch
+ls
+cd git-repos/qtile
+ls
+cd docs
+ls
+vim Makefile
+ls manual
+cd manual/
+vim hacking.rst
+cd
+nf
+vim .config/qtile/config.py
+./.config/qtile/scripts/autostart.sh
+vim .config/qtile/config.py
+vim .config/qtile/config.py
+vim .config/qtile/config.py
+cd .config/qtile
+vim config.py
+vim config.py
+vim config.py
+cd .config/qtile/scripts
+./autostart.sh
+neofetch
+sdn
+sx
+sx
+sx
+sx
+sx
+sx
+cd .config/qtile/scripts
+./autostart.sh
+clear && neofetch
+clear && neofetch
+vim .config/qtile/config.py
+sdn
+neofetch
+sx
+vim .zshrc
+neofetch
+neofetch --ascii_colors 2 2 2 2 2 2
+neofetch --ascii_colors 201 201 201 201 201 201
+neofetch
+neofetch
+cd .config/qtile/scripts
+./autostart.sh
+sudo emerge packettracer
+sdn
+sx
+zconf
+qconf
+qconf
+cd .config/qtile
+ls
+ls scripts
+qconf
+qconf
+qconf
+qconf
+xconf
+vim .config/xmonad/xmonad.hs
+cd .config/xmonad
+vim xmonad.hs
+qconf
+qconf
+qconf
+qconf
+qconf
+qconf
+qconf
+polybar&
+pconf
+polybar mainbar-xmonad &
+polybar mainbar-xmonad &
+polybar mainbar-xmonad &
+killall polybar
+polybar mainbar-xmonad &
+neofetch
+pconf
+pconf
+polybar mainbar-xmonad &
+killall polybar
+polybar mainbar-xmonad &
+qconf
+qconf
+qconf
+qconf
+sdr
+sx
+sx
+sx
+sx
+sx
+sx
+sx
+sx
+sx
+neofetch
+notify-send "Deez nuts"
+killall dunst
+dbus-launch dunst
+dbus-launch dunst
+notify-send "Deez nuts"
+ls Pictures
+cd .config
+ls
+ls
+cd Pictures
+ls
+rm screenshots.png
+qconf
+feh screenshots
+qconf
+sdn
+sx
+neofetch
+feh Pictures/screenshots
+neofetch
+qconf
+neofetch
+emerge --deselect mupdf
+sudo emerge --deselect mupdf
+sudo emerge --deselect app-text/mupdf
+sudo emerge --deselect xmonad
+sudo emerge --deselect xmonad-contrib
+zconf
+neofetch
+neofetch
+sudo emerge --deselect hyprland
+sudo emerge --deselect wayland
+emerge --deselect gui-libs/wlroots
+sudo emerge --deselect gui-libs/wlroots
+neofetch
+qconf
+emerge --deselect polybar
+sudo emerge --deselect polybar
+man lp
+zconf
+source .zshrc
+lpac
+man emerge
+vim packageList
+world
+ls /boot
+sudo emerge --depclean
+uname -r
+sdn
+sx
+sx
+sdm
+sdn
+sx
+ls
+lpac
+ls
+ls mus
+sudo emerge --deselect app-admin/haskell-updater
+sudo emerge eix
+sudo emerge app-portage/eix
+qconf
+sl
+sl
+sudo emerge --deselect sl
+sudo emerge --depclean
+ls /bin
+cd /
+touch woman
+touch woman
+ls
+rm -rf dwm*
+ls
+cd Downloads
+ls
+rm -rf *
+cd
+ls
+cd git-repos
+ls
+rm -rf qtile st-0.9 dwm dmenu arcolinux-dwm
+ls
+cd
+ls
+ls
+sudo emerge sl
+neofetch
+cmus
+lpac
+cp /usr/bin/neofetch .
+vim neofetch
+neofetch
+killall picom
+qconf
+qconf
+neofetch
+killall picom
+qconf
+qconf
+cava
+qconf
+cava
+cava
+whereis alsa
+sudo modprobe snd_aloop
+cava
+vim .config/cava/config
+cava
+sudo emerge obs
+qconf
+cava
+sudo su
+sudo su -
+sudo su -
+htop
+vim .config/cava/config
+vim .config/cava/config
+htop
+rc-service alsasound start
+sudo rc-service alsasound start
+sudo rc-service alsasound stop
+sudo rc-service alsasound start
+sudo su
+vim .config/cava/config
+cava
+neofetch
+vim .config/cava/config
+ls
+ls .dbus
+ls .dbus/session-bus/a9efa7ff5f219935f693287f64623202-0
+ls .dbus/session-bus/
+sudo vim .dbus/session-bus/a9efa7ff5f219935f693287f64623202-0
+alsamixer
+cava
+cava
+neofetch
+cd .config
+ls
+rm -rf polybar
+ls
+cmus
+sdn
+sx
+sx
+cmus
+htop
+neofetch
+killall picom
+sx
+sdn
+neofetch
+sdn
+sx
+neofetch
+neofetch
+sd 
+sdn
+sx
+sudo su
+neofetch
+sx
+sudo startx
+ls .config
+cd .config
+ls
+cd
+ls
+feh Pictures
+ls
+ls Pictures
+ls
+cd git-repos
+ls
+cd gentoo-configs
+ls
+git rm -r dwm/
+ls
+git commit -m "removed DWM, going for Qtile instead."
+git push -u origin main
+flameshot full
+cmus
+neofetch
+neofetch
+sdn
+sx
+neofetch
+sdn
+sx
+ls
+rm -rf dwm2
+ls
+cp -r dwm dwm2
+ls dwm2
+cd dwm
+ls
+rm dwm.c.rej
+ls
+ls
+ls
+cp -r dwm dwm2
+ls
+vim dwm/dwm.c.rej
+git clone https://git.suckless.org/dwm
+cd dwm
+ls
+patch < ~/dwm-actualfullscreen-20211013-cb3f58a.diff
+patch < ~/dwm-alternativetags-6.3.diff
+vim dwm.c
+sudo make clean
+ls
+sudo make clean install
+ls
+sudo make clean
+ls
+rm *.orig
+ls
+ls
+ls
+rm config.h
+ls
+vim config.def.h
+cd ~
+vim unicode_chars.txt
+cd .config/qtile
+ls
+ls
+vim config.py
+vim config.py
+vim config.py
+cd .config
+ls
+rm -rf qtile
+ls
+mv config.conf .config/neofetch
+neofetch
+zconf
+zconf
+neofetch
+vim .config/neofetch/config.conf
+neofetch
+ls
+ls
+rm neofetch
+ls
+rm packageList
+lpac
+neofetch
+vim .config/neofetch/config.conf
+neofetch
+neofetch
+lsblk
+fc-list | grep -i "inconsolata nfm"
+cd .local/share/dwm
+ls
+touch autostart_blocking.sh
+chmod +x autostart_blocking.sh
+ls
+ls
+cd dwm
+ls
+patch < ~/dwm-alpha-20230401-348f655.diff
+ls
+vim config.def.h
+cd ..
+ls
+rm -rf dwm2
+cp -r dwm dwm2
+ls
+cd dwm
+ls
+rm dwm.c.orig
+sudo make clean install
+ls
+sudo make clean
+ls
+rm config.h
+ls
+patch < ~/dwm-autostart-20210120-cb3f58a.diff
+ls
+rm *.orig
+ls
+sudo make clean install
+ls
+cd dwm
+ls
+sudo make clean
+ls
+rm config.h
+ls
+cd
+ls
+rm -rf dwm2
+cp -r dwm dwm2
+ls
+sx
+vim .xinitrc 
+sx
+whereis dmenu
+cd dwm
+ls
+vim config.def.h
+ls
+sudo make clean install
+sdr
+echo $TERM
+sx
+cd dwmm
+cd dwm
+ls
+sudo make clean
+ls
+rm config.h
+ls
+vim config.def.h
+sudo make clean install
+ls
+rm config.h
+ls
+make clean
+ls
+vim config.def.h
+sudo make clean install
+sdr
+neofetch
+neofetch
+killall picom
+cd dwm
+ls
+vim dwm.c.rej
+exit
+sx
+cd dwm
+ls
+sudo make clean
+ls
+rm config.h
+ls
+vim config.def.h
+ls
+sudo make clean install
+patch < ~/dwm-attachabove-6.2-20200421.diff
+vim dwm.c
+sudo make clean install
+sdr
+rm -rf dwm2
+ls
+cp -r dwm dwm2
+cd dwm
+ls
+make clean
+ls
+rm -rf config.h
+ls
+patch < ~/dwm-alttab-6.4.diff
+vim config.def.h
+ls
+rm *.{orig,rej}
+ls
+sudo make clean install
+sx
+ls
+cd dwm2
+sudo make clean install
+sdn
+sx
+sx
+sx
+sx
+sdr
+htop
+ls
+sdn
+sx
+ls
+rm -rf dwm
+ls
+ls
+cd dwm2
+ls
+vim dwm.c.rej
+ls
+rm *.{rej,orig}
+ls
+vim config.def.h
+cd
+git clone https://git.suckless.org/dwm
+ls
+rm -rf dwm2
+ls
+ls
+rm dwm-alternativetags-6.3.diff
+ls
+cp -r dwm dwm2
+ls
+cd dwm2
+ls
+patch < ~/dwm-autostart-20210120-cb3f58a.diff
+cd
+ls
+rm -rf dwm
+mv dwm2 dwm
+ls
+ls
+cp -r dwm dwm2
+ls
+cd dwm2
+ls
+patch < ~/dwm-attachabove-6.2-20200421.diff
+ls
+vim dwm.c
+vim dwm.c
+cd .config/qtile
+ls
+vim config.py
+echo $HOME
+echo -e "$HOME/.config/qtile"
+qconf
+neofetch
+cd .config/neofetch
+vim config.conf
+cd git-repos/qtile-extras
+ls
+vim setup.py
+python setup.py
+python setup.py install
+sudo python setup.py install
+neofetch
+sudo emerge brightnessctl
+xbacklight --help
+xbacklight -inc +5%
+xbacklight -inc +5
+cd
+cd git-repos
+git clone https://github.com/elParaguayo/qtile-extras.git
+ls
+cd qtile-extras
+ls
+vim PKGBUILD
+vim PKGBUILD
+qconf
+ls
+chmod +x PKGBUILD
+./PKGBUILD
+vim PKGBUILD
+ls
+python setup.py install
+sdn
+vim .xinitrc
+sx
+sx
+cd git-repos/qtile-extras
+ls
+vim PKGBUILD
+ls build
+ls build/bdist.linux-x86_64
+ls build/lib
+ls build/lib/qtile_extras
+cd git-repos/qtile-extras
+ls
+cd git-repos/qtile-extras
+ls
+python setup.py
+sudo emerge python-pip
+sudo emerge dev-python/python-pip
+sudo emerge dev-python/pip
+python setup.py
+pip install --use-pep517
+pip install qtile-extras
+whereis polybar
+sudo emerge polybar
+neofetch
+polybar mainbar-xmonad
+cd .config/
+ls
+cd polybar
+vim config
+mv git-repos/qtile-extras ~/.config/qtile
+ls
+cd .config/qtile
+ls
+cd .config/qtile
+ls
+vim config.py
+ls
+vim config.py
+cd .config/qtile
+ls
+cd qtile-extras
+ls
+ls qtile_extras
+ls
+mv qtile_extras ..
+ls
+cd ..
+ls
+rm -rf qtile-extras
+sudo rm -rf qtile-extras
+ls
+ls qtile_extras
+cd qtile_extras
+ls
+ls widget
+sdn
+sx
+neofetch
+neofetch
+sx
+sdn
+neofetch
+sdn
+sx
+neofetch
+neofetch
+ls Pictures
+ls Pictures/screenshots
+cp Pictures/screenshots/2023-05-29_23-10.png ./Gent.png
+neofetch
+killall picom
+rm ?ent.png
+ls
+cd Pictures/screenshots
+ls
+cp 2023-05-29_23-12.png ~/
+cd
+ls
+mv 2023-05-29_23-12.png gent.png
+ls
+neofetch
+neofetch
+ls
+neofetch --source ~/.config/neofetch/img/arch.png
+sdn
+sx
+s
+ls
+mv arch.png .config/neofetch
+cd .config/neofetch
+ls
+mkdir img
+mv arch.png img
+ls
+vim config.conf
+neofetch
+neofetch
+cd .config/neofetch
+ls
+vim config.conf
+neofetch
+vim config.conf
+neofetch
+vim config.conf
+neofetch
+vim config.conf
+neofetch
+vim config.conf
+neofetch
+vim config.conf
+neofetch
+vim config.conf
