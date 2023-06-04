@@ -16,10 +16,6 @@ function fish_user_key_bindings
 end
 
 # ALIASES
-# Quick open config
-alias pconf='nvim ~/.config/polybar/config.ini'	# Edit polybar config
-alias xconf='nvim ~/.xmonad/xmonad.hs'			# Edit xmonad config
-
 # Terminal stuff
 alias vim='nvim'								# Open Neovim instead of vim
 alias cls='clear'								# Shorter clear
@@ -38,9 +34,6 @@ alias du='du -h'								# Show du output in a human readable format by default
 # Internet stuff
 alias myip='curl ipinfo.io/ip'					# Get your public IP
 alias weather='curl wttr.in'					# Get weather informatoin based on your IP address
-
-# Misc stuff
-alias nf='neofetch'
 
 # Fish Prompt
 function fish_prompt --description 'Write out the prompt'
