@@ -25,7 +25,7 @@ import qualified Codec.Binary.UTF8.String as UTF8
 import XMonad.Layout.Spacing
 import XMonad.Layout.Gaps
 import XMonad.Layout.ResizableTile
----import XMonad.Layout.NoBorders
+import XMonad.Layout.NoBorders
 import XMonad.Layout.Fullscreen (fullscreenFull)
 import XMonad.Layout.Cross(simpleCross)
 -- import XMonad.Layout.Spiral(spiral)
@@ -65,8 +65,8 @@ myModMask = mod4Mask
 encodeCChar = map fromIntegral . B.unpack
 myFocusFollowsMouse = True
 myBorderWidth = 2
-myWorkspaces    = ["dev","www","discord","guilded","virt","pass","misc","mail","mus"]
--- myWorkspaces    = ["I","II","III","IV","V","VI","VII","VIII","IX","X"]
+-- myWorkspaces    = ["dev","www","chat","guilded","virt","pass","misc","mail","mus"]
+myWorkspaces    = ["I","II","III","IV","V","VI","VII","VIII","IX"]
 
 myBaseConfig = desktopConfig
 
@@ -98,7 +98,7 @@ myManageHook = composeAll . concat $
 
 
 -- myLayout = gaps [(U,10), (D,10), (L,10), (R,10)] (smartSpacing 4 (avoidStruts(tiled))) ||| fullscreenFull
-myLayout = gaps [(U,8), (D,8), (R,8), (L,8)] ( avoidStruts $ spacingRaw True (Border 5 2 2 2) True (Border 2 2 2 2) True $ mkToggle (NBFULL ?? NOBORDERS ?? EOT) $ tiled ) ||| Full
+myLayout = gaps [(U,8), (D,8), (R,8), (L,8)] ( avoidStruts $ spacingRaw True (Border 5 2 2 2) True (Border 2 2 2 2) True $ mkToggle (NBFULL ?? NOBORDERS ?? EOT) $ tiled ) ||| noBorders Full
     where
         tiled = Tall nmaster delta tiled_ratio
         nmaster = 1
@@ -126,7 +126,7 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
   ----------------------------------------------------------------------
   -- SUPER + FUNCTION KEYS
 
-  [ ((modMask .|. shiftMask , xK_Return ), spawn $ "alacritty" )
+  [ ((modMask .|. shiftMask , xK_Return ), spawn $ "wezterm" )
   , ((modMask, xK_p ), spawn $ "rofi -show drun")
   , ((modMask, xK_s ), spawn "flameshot full -p /home/jef/Pictures/screenshots")
   , ((modMask .|. shiftMask, xK_s ), spawn "flameshot gui -s -p /home/jef/Pictures/screenshots")
