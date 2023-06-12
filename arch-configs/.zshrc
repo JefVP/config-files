@@ -22,8 +22,8 @@ compinit
 # ----------------------------------------------
 # EXPORTS
 # ----------------------------------------------
-PROMPT="%F{81}%n%f%F{15}@%f%F{87}%m:%f%F{81}[%~]%f%F{15}: " # Set Arch themed prompt
-TERM='alacritty' # Set terminal emulator to Alacritty, set this one for whatever terminal you use.
+PROMPT="%F{33}%n%f%F{15}@%f%F{25}%m:%f%F{33}[%~]%f%F{15}: " # Set Arch themed prompt
+TERM='wezterm' # Set terminal emulator to Alacritty, set this one for whatever terminal you use.
 EDITOR='nvim' # Set default editor to neovim
 BROWSER='firefox' # Set browser to firefox
 
@@ -88,7 +88,7 @@ alias wget='wget --hsts-file="$XDG_CACHE_HOME/wget-hsts"'
 
 # Misc aliases
 alias sx='startx' # Start X server faster
-alias ytdl='/home/jef/.config/scripts/ytdl.sh' # calls my youtube dl handling script
+alias ytdl="$HOME/.config/scripts/ytdl.sh" # calls my youtube dl handling script
 
 # ----------------------------------------------
 # SSH RELATED ALIASES

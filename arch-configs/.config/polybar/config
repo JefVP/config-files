@@ -73,8 +73,8 @@ line-color = #f00
 ;border-bottom-size = 25
 border-color = #00000000
 
-padding-left = 0
-padding-right = 1
+padding-left = 2
+padding-right = 2
 
 module-margin-left = 1
 module-margin-right = 1
@@ -108,18 +108,17 @@ tray-background = ${colors.background}
 ################################################################################
 
 [bar/mainbar-xmonad-extra]
-monitor = ${env:MONITOR}
-;monitor-fallback = HDMI1
-monitor-strict = false
+monitor = HDMI-1
+monitor-strict = true
 override-redirect = false
 width = 100%
-height = 30
+height = 20
 ;offset-x = 1%
-;offset-y = 1%
+;offset-y = 0%
 radius = 0.0
 fixed-center = true
-bottom = true
-separator = |
+bottom = false
+separator =
 
 background = ${colors.background}
 foreground = ${colors.foreground}
@@ -130,30 +129,30 @@ line-color = #f00
 ;border-size = 2
 ;border-left-size = 25
 ;border-right-size = 25
-border-top-size = 10
+border-top-size = 0
 ;border-bottom-size = 25
 border-color = #00000000
 
-padding-left = 0
-padding-right = 1
+padding-left = 2
+padding-right = 2
 
-module-margin-left = 3
-module-margin-right = 3
+module-margin-left = 1
+module-margin-right = 1
 
 ; Enable support for inter-process messaging
 ; See the Messaging wiki page for more details.
 enable-ipc = true
 
-;https://github.com/jaagr/polybar/wiki/Fonts
-font-0 = "Inconsolata NFM:size=12;0"
-font-1 = "FontAwesome:size=13;0"
+; Fonts for 2nd bar
+font-0 = "Symbols Nerd Font:size=10;0"
+font-1 = "Inconsolata NFM:size=11;0"
 font-2 = "Noto Sans:size=10;0"
 font-3 = "Noto Sans Mono:size=10;0"
 font-4 = "FontAwesome5Brands:size=13;0"
 
-modules-left = load-average
-modules-center = networkspeeddown networkspeedup
-modules-right = filesystem
+modules-left = ewmh
+modules-center = filesystem 
+modules-right = uptime date
 
 ;tray-detached = false
 ;tray-offset-x = 0
@@ -171,7 +170,7 @@ modules-right = filesystem
 
 [module/backlight-acpi]
 inherit = module/xbacklight
-type = internal/backlight
+type = internal/backliuptimeght
 card = intel_backlight
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
@@ -502,9 +501,10 @@ format-background = ${colors.background}
 [module/networkspeedup]
 ;https://github.com/jaagr/polybar/wiki/Module:-network
 type = internal/network
+interface = enp2s0
 ;interface = wlp3s0
 ;interface = enp14s0
-interface = enp0s31f6
+;interface = enp0s31f6
 ;interface = enp4s0
 label-connected = "%upspeed:7%"
 format-connected = <label-connected>
@@ -553,9 +553,9 @@ label = Uptime : %output%
 
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
-format-prefix = " "
-format-prefix-foreground = #C15D3E
-format-underline = #C15D3E
+format-prefix = "󰁫 "
+format-prefix-foreground = #0084FF
+format-underline = #0084FF
 
 ################################################################################
 

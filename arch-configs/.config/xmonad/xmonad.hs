@@ -65,7 +65,7 @@ myModMask = mod4Mask
 encodeCChar = map fromIntegral . B.unpack
 myFocusFollowsMouse = True
 myBorderWidth = 2
--- myWorkspaces    = ["dev","www","chat","guilded","virt","pass","misc","mail","mus"]
+-- myWorkspaces    = ["1:\uea85","www","chat","guilded","virt","pass","misc","mail","mus"]
 myWorkspaces    = ["I","II","III","IV","V","VI","VII","VIII","IX"]
 
 myBaseConfig = desktopConfig
@@ -98,7 +98,7 @@ myManageHook = composeAll . concat $
 
 
 -- myLayout = gaps [(U,10), (D,10), (L,10), (R,10)] (smartSpacing 4 (avoidStruts(tiled))) ||| fullscreenFull
-myLayout = gaps [(U,8), (D,8), (R,8), (L,8)] ( avoidStruts $ spacingRaw True (Border 5 2 2 2) True (Border 2 2 2 2) True $ mkToggle (NBFULL ?? NOBORDERS ?? EOT) $ tiled ) ||| noBorders Full
+myLayout = smartBorders (gaps [(U,8), (D,8), (R,8), (L,8)] ( avoidStruts $ spacingRaw True (Border 5 2 2 2) True (Border 2 2 2 2) True $ mkToggle (NBFULL ?? NOBORDERS ?? EOT) $ tiled ) ||| noBorders(Full))
     where
         tiled = Tall nmaster delta tiled_ratio
         nmaster = 1

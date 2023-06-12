@@ -8,6 +8,7 @@ function run {
 }
 
 (sleep 2; polybar mainbar-xmonad) &
+(sleep 2; polybar mainbar-xmonad-extra) &
 
 #cursor active at boot
 xsetroot -cursor_name left_ptr &
