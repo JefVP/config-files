@@ -1,14 +1,13 @@
-#	         _     
-#	 _______| |__  
-#	|_  / __| '_ \ 
-#	 / /\__ \ | | | https://github.com/JefVP
-#	/___|___/_| |_| my zsh config, nothing special
-
-# ----------------------------------------------
-# INITIALISE
+#          _     
+#  _______| |__  
+# |_  / __| '_ \ 
+#  / /\__ \ | | |
+# /___|___/_| |_|
 # ----------------------------------------------
 
-HISTFILE=~/.config/zsh/zsh_history # Setting history file
+# ---- Setting some initial options ----
+
+HISTFILE="$HOME/.config/zsh/zsh_history" # Setting history file
 HISTSIZE=1000 # History file 1000 lines
 SAVEHIST=1000 # History file 1000 lines
 
@@ -19,24 +18,20 @@ zstyle ':completion:*' menu select
 autoload -Uz compinit
 compinit
 
-# ----------------------------------------------
-# EXPORTS
-# ----------------------------------------------
-PROMPT="%F{33}%n%f%F{15}@%f%F{25}%m:%f%F{33}[%~]%f%F{15}: " # Set Arch themed prompt
-TERM='wezterm' # Set terminal emulator to Alacritty, set this one for whatever terminal you use.
+# ---- Setting Environment Variables ----
+PROMPT="%F{33}%n%f%F{15}@%f%F{25}%m:%f%F{33}[%~]%f%F{15}: "
+TERM='wezterm' # Set Terminal Emulator to WezTerm
 EDITOR='nvim' # Set default editor to neovim
-BROWSER='firefox' # Set browser to firefox
+BROWSER='firefox'
 
-XDG_CONFIG_HOME='/home/jef/.config'
-XDG_CACHE_HOME='/home/jef/.cache'
-XDG_DATA_HOME='/home/jef/.local/share'
+XDG_CONFIG_HOME="$HOME/.config"
+XDG_CACHE_HOME="$HOME/.cache"
+XDG_DATA_HOME="$HOME/.local/share"
 WGETRC="$XDG_CONFIG_HOME/wgetrc"
-CARGO_HOME="$XDG_DATA_HOME"/cargo
+CARGO_HOME="$XDG_DATA_HOME/cargo"
 
-# ----------------------------------------------
-# VI MODE
-# ----------------------------------------------
-bindkey -v										# Vim keybinds
+# ---- Setting VI Mode ----
+bindkey -v # Vim keybinds
 
 # Change cursor shape for different vi modes.
 function zle-keymap-select {
@@ -59,41 +54,27 @@ function zle-keymap-select {
        echo -ne '\e[5 q' # Use beam shape cursor for each new prompt.
     }
 
-# ----------------------------------------------
-# ALIASES
-# ----------------------------------------------
-# editing configs
-alias zconf='nvim ~/.zshrc' # Edit zsh config
-alias xconf='nvim ~/.config/xmonad/xmonad.hs' # Edit xmonad config
-
-# Terminal related aliases
+# ---- Setting aliases ----
 alias vim='nvim' # Open neovim instead of vim
 alias grep='grep --color=auto' # More colour in the grep output
-
-# Power aliases
-alias sdn='sudo shutdown now' # Turn off computer
-alias sdr='sudo reboot now' # Restart computer
-
-# File management aliases
 alias ls='exa -alh' # Set ls to a more colourful and lenghty output
 alias tree='exa -ahT' # Get a colourful filesystem tree from whatever directory
 alias df='df -h' # Show df output in a human readable format by default
 alias du='du -h' # Show du output in a human readable format by default
-alias untar='tar xvpf' # quicker way to extract tarballs
+alias sdn='sudo shutdown now' # Turn off computer
+alias sdr='sudo reboot now' # Restart computer
 
-# Internet related aliases
+alias untar='tar xvpf' # quicker way to extract tarballs
 alias myip='curl ipinfo.io/ip' # Get your public IP address
 alias weather='curl wttr.in' # Get weather information based on your IP address
 alias wget='wget --hsts-file="$XDG_CACHE_HOME/wget-hsts"'
-
-# Misc aliases
 alias sx='startx' # Start X server faster
 alias ytdl="$HOME/.config/scripts/ytdl.sh" # calls my youtube dl handling script
 
 # ----------------------------------------------
 # SSH RELATED ALIASES
 # ----------------------------------------------
-alias serv='ssh jef@139.162.142.88' # Quick way to ssh into my Server
+alias serv='ssh jef@jefvp.bio' # Quick way to ssh into my Server
 alias gent='ssh jef@192.168.122.227' # Quick way to ssh into my Gentoo vm
 # ----------------------------------------------
 # Plugins

@@ -32,9 +32,9 @@ format-offset =
 ; Nord theme ============
 background = #2F343F
 foreground = #f3f4f5
-foreground-active = #6790EB
+foreground-active = #ff0000
 occupied = #cccccc
-occupied-active = #b3c7f5
+occupied-active = #d63b3e
 active = #5e81ac
 alert = #d08770
 volume-min = #a3be8c
@@ -267,8 +267,8 @@ interval = 1
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
 format-prefix = " "
-format-prefix-foreground = #cd1f3f
-format-underline = #cd1f3f
+format-prefix-foreground = #ff0000
+format-underline = #ff0000
 
 ;label-font = 1
 
@@ -297,8 +297,8 @@ date-alt = " %d-%m-%Y"
 time = %H:%M
 time-alt = %H:%M
 format-prefix = " "
-format-prefix-foreground = #f00
-format-underline = #f00
+format-prefix-foreground = #a500ff
+format-underline = #a500ff
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
 label = %date% %time%
@@ -325,7 +325,7 @@ label-monitor = %name%
 label-active = %name%
 label-active-foreground = ${colors.foreground-active}
 label-active-background = ${colors.background}
-label-active-underline= #6790eb
+label-active-underline= #ff0000
 label-active-padding = 2
 
 label-occupied = %name%
@@ -453,8 +453,8 @@ interval = 1024
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
 format-prefix = "  "
-format-prefix-foreground = #0084FF
-format-underline = #0084FF
+format-prefix-foreground = #005faf
+format-underline = #005faf
 
 ################################################################################
 
@@ -490,8 +490,8 @@ label = %gb_used%/%gb_free%
 
 format = Mem <label>
 format-prefix = "  "
-format-prefix-foreground = #3384d0
-format-underline = #3384d0
+format-prefix-foreground = #005faf
+format-underline = #005faf
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
 
@@ -533,10 +533,10 @@ format-connected-background = ${colors.background}
 
 ################################################################################
 
-[module/sep]
+[module/triforce]
 ; alternative separator
 type = custom/text
-content = 
+content = 󰯙
 content-foreground = ${colors.foreground}
 content-background =  ${colors.background}
 format-foreground = ${colors.foreground}
@@ -565,17 +565,17 @@ type = internal/volume
 format-volume = "<label-volume>  <bar-volume>"
 
 label-volume = "󰕾"
-label-volume-foreground = #3384d0
+label-volume-foreground = #005faf
 label-muted = muted
 
 bar-volume-width = 10
-bar-volume-foreground-0 = #3384d0
-bar-volume-foreground-1 = #3384d0
-bar-volume-foreground-2 = #3384d0
-bar-volume-foreground-3 = #3384d0
-bar-volume-foreground-4 = #3384d0
-bar-volume-foreground-5 = #3384d0
-bar-volume-foreground-6 = #3384d0
+bar-volume-foreground-0 = #005faf
+bar-volume-foreground-1 = #005faf
+bar-volume-foreground-2 = #005faf
+bar-volume-foreground-3 = #005faf
+bar-volume-foreground-4 = #005faf
+bar-volume-foreground-5 = #005faf
+bar-volume-foreground-6 = #005faf
 bar-volume-gradient = false
 bar-volume-indicator = 
 bar-volume-indicator-font = 0
@@ -590,7 +590,7 @@ format-muted-prefix = "  "
 format-muted-prefix-foreground = "#ff0000"
 format-muted-foreground = ${colors.foreground}
 format-muted-background = ${colors.background}
-format-volume-underline = #3384d0
+format-volume-underline = #005faf
 format-muted-underline = #ff0000
 
 ################################################################################
@@ -739,7 +739,7 @@ label-maxlen = 50
 
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
-format-underline = #40ad4b
+; format-underline = #005faf
 
 ###############################################################################
 

@@ -7,6 +7,7 @@ function run {
   fi
 }
 
+killall polybar
 (sleep 2; polybar mainbar-xmonad) &
 (sleep 2; polybar mainbar-xmonad-extra) &
 
@@ -21,5 +22,4 @@ run nm-applet &
 picom -b
 /usr/bin/greenclip daemon > /dev/null
 dbus-launch dunst &
-#starting user applications at boot time
 

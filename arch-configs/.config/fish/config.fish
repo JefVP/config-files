@@ -2,13 +2,20 @@
 #	 / _(_)___| |__  
 #	| |_| / __| '_ \ 
 #	|  _| \__ \ | | |
-#	|_| |_|___/_| |_|							# My fish config, unmaintained as I moved to zsh.
-                 
+#	|_| |_|___/_| |_|  My fish config, unmaintained as I moved to zsh.
 
 # INITIALISE
-set fish_greeting ""							# Supress "Welcome to fish..." message
-# set TERM "st-256color"						# Set terminal to whatever it is you are using, maybe try xprop and clicking your terminal first.
-set EDITOR "nvim"								# Set editor to Neovim
+set fish_greeting "" # Supress "Welcome to fish..." message
+set TERM "wezterm" #Setting the terminal emulator variable to wezterm, my terminal of choice
+set EDITOR "nvim"
+set BROWSER "firefox"
+
+#XDG
+set XDG_CONFIG_HOME="$HOME/.config"
+set XDG_CACHE_HOME="$HOME/.cache"
+set XXDG_DATA_HOME="$HOME/.local/share"
+set WGETRC="$XDG_CONFIG_HOME/wgetrc"
+set CARGO_HOME="$XDG_DATA_HOME/cargo"
 
 # VI MODE KEYBINDS
 function fish_user_key_bindings
@@ -17,23 +24,24 @@ end
 
 # ALIASES
 # Terminal stuff
-alias vim='nvim'								# Open Neovim instead of vim
-alias cls='clear'								# Shorter clear
-alias grep='grep --color=auto'					# More colour in the grep output
+alias vim='nvim' # Open Neovim instead of vim
+alias grep='grep --color=auto' # More colour in the grep output
 
 # Power
-alias sdn='sudo shutdown now'					# Turn off computer
-alias sdr='sudo reboot now'						# Restart computer
+alias sdn='sudo shutdown now' #Turn off computer
+alias sdr='sudo reboot now' # Restart computer
 
 # File management aliases
-alias ls='exa -alh'								# Set ls to a more colourful and lengthy output
-alias tree='exa -ahT'							# Get a colourful filesystem tree for whatever directory
-alias df='df -h'								# Show df output in a human readable format by default
-alias du='du -h'								# Show du output in a human readable format by default
+alias ls='exa -alh' # Set ls to a more colourful and lengthy output
+alias tree='exa -ahT' # Get a colourful filesystem tree
+alias df='df -h' # Show df output in a human readable format by default
+alias du='du -h' # Show du output in a human readable format by default
+alias untar='tar xvpf' # Extract tarballs
 
 # Internet stuff
-alias myip='curl ipinfo.io/ip'					# Get your public IP
-alias weather='curl wttr.in'					# Get weather informatoin based on your IP address
+alias myip='curl ipinfo.io/ip' # Get your public IP
+alias weather='curl wttr.in' # Get weather informatoin based on your IP address
+alias wget='wget --hsts-file="$XDG_CACHE_HOME/wget-hsts"'
 
 # Fish Prompt
 function fish_prompt --description 'Write out the prompt'
