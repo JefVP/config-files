@@ -18,7 +18,7 @@ set WGETRC="$XDG_CONFIG_HOME/wgetrc"
 set CARGO_HOME="$XDG_DATA_HOME/cargo"
 
 # VI MODE KEYBINDS
-function fish_user_key_bindings
+#function fish_user_key_bindings
 	fish_vi_key_bindings
 end
 
